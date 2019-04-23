@@ -12,6 +12,7 @@ services:
       - /etc/nginx/vhost.d
       - /usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./server.conf:/etc/nginx/conf.d/server.conf
     restart: always
     # network_mode: shared
     # networks:
