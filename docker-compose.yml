@@ -19,6 +19,14 @@ services:
     #   app_net:
     #     ipv4_address: 172.16.238.2
 
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    privileged: true
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
   # web:
   #   image: nginx
   #   container_name: web
