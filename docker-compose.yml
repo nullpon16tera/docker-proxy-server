@@ -26,6 +26,7 @@ services:
     ports:
       - "8025:8025"
       - "1025:1025"
+    restart: always
 
   # web:
   #   image: nginx
