@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   proxy:
     image: jwilder/nginx-proxy
@@ -8,7 +8,7 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - ./docker-compose.d/certs:/etc/nginx/certs
+      - ./docker-compose.d/certs:/etc/nginx/certs:rw
       - /etc/nginx/vhost.d
       - /usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
