@@ -3,6 +3,9 @@
 ## Commands
 
 ```
+// First Setup 初回時のみ実行してください。
+$ make setup
+
 // Docker contaienr Run
 $ make run
 
