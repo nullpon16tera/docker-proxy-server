@@ -14,10 +14,6 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./server.conf:/etc/nginx/conf.d/server.conf
     restart: always
-    # network_mode: shared
-    # networks:
-    #   app_net:
-    #     ipv4_address: 172.16.238.2
 
   mailhog:
     image: mailhog/mailhog
@@ -28,25 +24,7 @@ services:
       - "1025:1025"
     restart: always
 
-  # web:
-  #   image: nginx
-  #   container_name: web
-  #   privileged: true
-  #   environment:
-  #     VIRTUAL_HOST: cc5.me localhost
-  #   restart: always
-    # network_mode: shared
-    # networks:
-    #   app_net:
-    #     ipv4_address: 172.16.238.3
-
 networks:
   default:
     external:
       name: shared
-  # app_net:
-  #   driver: bridge
-  #   ipam:
-  #     driver: default
-  #     config:
-  #       - subnet: 172.16.238.0/24
