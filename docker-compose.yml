@@ -26,5 +26,5 @@ services:
 
 networks:
   default:
-    external:
-      name: shared
+    external: true
+    name: shared
